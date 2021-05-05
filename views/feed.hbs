@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> aesthete | your new artist portfolio</title>
+	<link rel="stylesheet" type="text/css" href="css/feed.css">
+	<link rel="stylesheet" type="text/css" href="css/animations.css">
+	<link rel="stylesheet" type="text/css" href="css/menubar.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rock+Salt">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<script src="feed.js"></script>
+</head>
+<body>
+	<div id="feedpage">
+		<div id="menubar">
+			<div id="logowrap"> aesthete </div>
+			<div id="controlwrap">
+			
+			<form method="post" action="search">
+			<input type="text" name="query" placeholder="Search">
+			<button type="submit"><img src="icons/magnifier.png" width="10"></button></form>
+
+			<a href="/feed">
+		    <div class="menubutton" id="homenav"> home </div> </a>
+
+		    <a href="/profile">
+		    <div class="menubutton"> profile </div> </a>
+
+		    <a href="/logout">
+		    <div class="menubutton"> logout </div> </a>
+			</div>
+	  	</div>
+
+
+		<div id="suggestedword"> suggested</div>
+		<div id="suggtags"> 
+			<a href="/tag/anime"> 
+			<div class="stags" id="stags1">
+			<p class="insidetext"> #anime </p> 
+			</div> 
+			</a>
+
+			<a href="/tag/manga">
+			<div class="stags" id="stags2">
+			<p class="insidetext"> #manga </p>
+			</div>
+			</a>
+
+			<a href="/tag/color">
+			<div class="stags" id="stags3">
+			<p class="insidetext"> #color </p>
+			</div>
+			</a>
+
+			<a href="/tag/monochrome">
+			<div class="stags" id="stags4">
+			<p class="insidetext"> #monochrome </p>
+			</div>
+			</a>
+
+			<a href="/tag/fantasy">
+			<div class="stags" id="stags5">
+			<p class="insidetext"> #fantasy </p>
+			</div>
+			</a>
+		</div>
+
+		<div id="suggusers"> 
+			{{#each users}}
+			<div class="userscont" id="user1"> 
+				<a href ="/user/{{username}}">
+				<div class="icon" ><img src="/avatar/{{avatar}}"></div>
+				<div class="name" > {{name}} </div>
+				<div class="uname"> {{username}}</div>
+				</a>
+			</div>
+			{{/each}}
+			
+		</div>
+
+
+
+		<div id="feedword"> your feed</div>
+		<div class="feed" id="fpfeed">
+			<div class="feedcont">
+
+				{{#each posts}}
+
+				<a href="/post/{{_id}}">
+				<div class="feedthumbs">
+					<img src="/posts/{{image}}" width="100%" height="100%">
+				</div>
+				</a>
+					
+				{{/each}}
+					
+
+			</div> 
+		</div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> aesthete | your new artist portfolio </title>
+	<link rel="stylesheet" type="text/css" href="/css/samplepost.css">
+	<link rel="stylesheet" type="text/css" href="/css/menubar.css">
+	<link rel="stylesheet" type="text/css" href="/css/animations.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rock+Salt">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+</head>
+<body>
+	<div id="profilepage">
+		<div id="menubar">
+			<div id="logowrap"> aesthete </div>
+			<div id="controlwrap">
+			
+
+			<form method="post" action="/search">
+			<input type="text" name="query" placeholder="Search">
+			<button type="submit"><img src="/icons/magnifier.png" width="10"></button></form>
+
+			<a href="/feed">
+		    <div class="menubutton" id="homenav"> home </div> </a>
+
+		    <a href="/profile">
+		    <div class="menubutton"> profile </div> </a>
+
+		    <a href="/logout">
+		    <div class="menubutton"> logout </div> </a>
+			</div>
+	  	</div>
+
+	
+		<div id="ppfeed">
+			<div id="ppfeedcont">
+			  	<div class="tbcontent">
+			  		<div class="tbleft">
+						<img src="/posts/{{image}}" width="100%" height="100%">
+					</div>
+
+					<div class="tbright">
+						<div class="tbrup">
+
+							{{#if author}}
+							<div class="editcontrol" id="tc1">
+								<a href="#editpost">
+								<div class="editbuttons" id="e1">Edit post</div>
+								</a>
+
+
+								<div class="thumbsview" id="editpost">
+								<div class="tbcontent2">
+									<a class="close" href="#">&times;</a> <br><br>
+									<div id="formwrap">
+										
+										<form method="post" action="/editpost">
+										<input type ="hidden" name = "postid" value = "{{id}}" />
+										<textarea rows="9" name="editedpost"></textarea>
+										<center>
+										<input type="submit" value="Edit Post" id="ep1"> </input>
+										</center>
+										</form>
+
+									</div>
+									</div>
+
+								</div>
+
+
+								<a href="/deletepost/{{id}}">
+								<div class="editbuttons" id ="d1">Delete post</div>
+								</a>
+							</div>
+							{{/if}}
+
+							{{#if liked}}
+							<div class="tblikes">
+							<form method="post" action="/unlike">
+							<input type ="hidden" name = "unlikeid" value = "{{id}}" />
+							<input type="submit" value="" 
+								   style="background-image: url('/icons/like.png'); 
+								   margin:0px;
+								   position:absolute;
+								   margin-left:55px;
+								   margin-top:3px;
+								   width:15px;
+								   height:15px;
+								   padding:0px;
+								   border-radius:0px;
+								   background-color:transparent;
+								   background-repeat:no-repeat;
+								   background-size:100% 100%;
+								   border:0px">
+							</form>
+							<p id="postlikes">{{likes}} likes</p>
+							</div>
+							{{else}}
+							<div class="tblikes">
+							<form method="post" action="/like">
+							<input type ="hidden" name = "likeid" value = "{{id}}" />
+							<input type="submit" value="" 
+								   style="background-image: url('/icons/nolike.png'); 
+								   margin:0px;
+								   position:absolute;
+								   margin-left:55px;
+								   margin-top:3px;
+								   width:15px;
+								   height:15px;
+								   padding:0px;
+								   border-radius:0px;
+								   background-color:transparent;
+								   background-repeat:no-repeat;
+								   background-size:100% 100%;
+								   border:0px">
+							</form>
+							<p id="postlikes">{{likes}} likes</p>
+							</div>
+							{{/if}}
+
+
+							<div class="tbuc" id="tbuc1"> 
+							{{#if author}}
+							<a href="/profile">
+							<span class="unamec"> {{user}} </span> </a>
+							{{else}}
+							<a href="/user/{{username}}">
+							<span class="unamec"> {{user}} </span> </a>
+
+							{{/if}}
+							{{caption}}
+							</div>
+
+							<div class="tbtags" id="tbtu1">
+								{{#each tags}}
+								<a href="/tag/{{this}}">
+								<div class="ttags" id="tbt11"> 
+								{{this}}
+								</div>
+								</a>
+								{{/each}}
+							</div>
+
+
+						</div>
+
+						<div class="tbrdown">
+							{{#each comments as | comment | }}
+								<div class="commentscont" id="tb1comment1">
+									<div class="commentusericonbox">
+										<div class="commentusericon" id="cui11">
+										<img src="/avatar/{{icon}}">
+										</div>
+									</div>
+									<div class="commentsfr" id="cc11"> 
+										<p> 
+										<!-- {{#with comment}} --> 
+										<!-- <a href="3bprofile.html"> -->
+
+										
+										{{#if isAuthor}}
+										<a href="/profile">
+										{{else}}
+										<a href="/user/{{commentUser}}">
+										{{/if}}
+										<span class="unamec">{{commentUser}} </span>
+										</a>  {{commentText}}
+										</p> 
+										<!-- {{/with}} -->
+									</div>
+									{{#if isAuthor}}
+									<div class="editcontrol" id="tc2">
+									<a href="#editcomment+{{{commentID}}}">
+									<div class="editbuttons" id="e2">Edit comment</div>
+									</a>
+									<div class="thumbsview" id="editcomment+{{{commentID}}}">
+									<div class="tbcontent2">
+									<a class="close" href="#">&times;</a> <br><br>
+									<div id="formwrap"> 
+										<!-- changed formwrap to formwrap2 for debugging purposes -->
+
+										<form method="get" name="updatedCommentForm" action="/editcomment">
+										<input type ="hidden" name = "commentId" value = "{{this.commentID}}" />
+										<input type ="hidden" name = "postid2" value = "{{{id}}}" />
+										<textarea rows="9" name="editedcomment"> {{this.commentID}}</textarea>
+										<center>
+										<input type="submit" value="Edit Comment" id="editcbutton" name="editcbutton"> </input>
+										</center>
+										</form>
+											
+									</div>
+									</div>
+
+									</div>
+									<a href="/deletecomment/{{{commentID}}}">
+									<div class="editbuttons" id ="d2">Delete comment</div>
+									</a>
+									</div>
+									{{/if}}
+								
+								</div>
+							{{/each}}
+
+							
+
+							<form method="get" action="/uploadComment/{{id}}" name="commentFormSubmission" id="commentForm">
+								<textarea rows="2" name="mycomment1" id="mycomment1"></textarea><br>
+								<input type="submit" id ="subcomment" value="Comment">
+							</form>
+
+						</div>
+					</div>
+			  	</div>
+		  </div>
+		</div>
+		
+		</div>
+	
+	
+</body>
+
+</html>

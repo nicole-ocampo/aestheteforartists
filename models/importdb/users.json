@@ -1,0 +1,97 @@
+[{
+  "_id": {
+    "$oid": "6080427ef99b413a78e0e681"
+  },
+  "name": "nini",
+  "email": "ninibiz@gmail.com",
+  "username": "nini3",
+  "password": "$2b$10$lpBEUUoovoVJkdnU0v79oeQ2JBQ9iBBXnbU43WJVj.XAPOZlj8TWe",
+  "bio": "hey guys! i'm nini and i'm an aspiring illustrator. hope you like my works and thank you for visiting <33",
+  "website": "nini.com",
+  "avatar": "qux4h1adkk.jpg",
+  "cover": "clnks7qtu5t.jpg"
+},{
+  "_id": {
+    "$oid": "60892c130435801920a5a6be"
+  },
+  "name": "kageyama",
+  "email": "kageyama01@gmail.com",
+  "username": "kageyamatobio",
+  "password": "$2b$10$898VD2o65NqGwyDaODBnReoEIa94png4GR6XW8yPbGa3v9hV.VzWC",
+  "bio": "hello, i like seeing fanarts of me and my team. volleyball rocks! ",
+  "avatar": "02i5ro7j4ntb.jpg",
+  "cover": "ys9x80h0j3.jpg",
+  "website": "haikyuu.com"
+},{
+  "_id": {
+    "$oid": "60893a9ffc809612703a5a90"
+  },
+  "name": "Shoyo Hinata",
+  "email": "hinatashoyo@gmail.com",
+  "username": "shoyohinata",
+  "password": "$2b$10$6EN45LLG22pcc0xO5Fjia./RewTZ5VOMqTIjkGHpE.eQMWyABq7bq",
+  "bio": "hi there! i love volleyball :) if you know some tricks and tips, please let me know, i would love to learn from you! also i enjoy all of your fanarts ARIGATOU GOZAIMASU!!",
+  "avatar": "o7oi4mmxll9.jpg",
+  "cover": "9o8fcrxeofb.jpg",
+  "website": "haikyuu.com"
+},{
+  "_id": {
+    "$oid": "60893d8afc809612703a5a97"
+  },
+  "name": "Oikawa",
+  "email": "oikawa@gmail.com",
+  "username": "oikawa1",
+  "password": "$2b$10$G9lRaMGfG25yCySb5TtAuuBo.fojlo3Ubziaxgz4QA7GPsbNao7S.",
+  "bio": "I AM THE BEST AT VOLLEYBALL. I WILL BEAT KAGEYAMA ONE DAY. I WILL NOT LET MY JUNIOR BEAT ME EVERY SINGLE TIME. GAME ON!!",
+  "avatar": "3qedvu072xw.jpg",
+  "cover": "2nnnddar2qu.jpg",
+  "website": "haikyuu.com"
+},{
+  "_id": {
+    "$oid": "60893e8bfc809612703a5a9e"
+  },
+  "name": "Cher",
+  "email": "cher2@gmail.com",
+  "username": "chernew",
+  "password": "$2b$10$AnVbTGopod.T6t5SRFEyz.AGlJpUvvC3rRp5ykpKMYCIfGYRgH1A6",
+  "bio": "global | illustrator | new pieces every friday | check out my art prints linked on my website below, new release MAY 21 2021",
+  "avatar": "37p5xyfa8lh.jpg",
+  "cover": "z2csh9z51oe.jpg",
+  "website": "cher.com"
+},{
+  "_id": {
+    "$oid": "60894123f7769007cc329191"
+  },
+  "name": "Gojo",
+  "email": "gojo@gmail.com",
+  "username": "satorugojo",
+  "password": "$2b$10$rRG7o89Y5052hP499OS4buE74m/iaiuOJ6KE7xv49y1EKYH.9Yjke",
+  "bio": "I AM THE BEST!!!",
+  "avatar": "5s28opguv5u.jpg",
+  "cover": "dfivgcsprxi.png",
+  "website": "jujutsukaisen.com"
+},{
+  "_id": {
+    "$oid": "608941ccf7769007cc32919a"
+  },
+  "name": "tokkyu",
+  "email": "tokkyu@gmail.com",
+  "username": "tokkyu",
+  "password": "$2b$10$Oz4gEVUH5NNXMgKVKyVSzOYlHtpZScda/aNGGQtadN6OZJ2/bRaT2",
+  "bio": "hi there! i'm a global illustrator seeking to look for commission work. send me a message through my website below. :) thanks!",
+  "avatar": "sk5hqfwdhb.jpg",
+  "cover": "8cfhk9vgevh.jpg",
+  "website": "tokkyu.com"
+},{
+  "_id": {
+    "$oid": "60923fbdb0b9b8440c985fdc"
+  },
+  "name": "aa",
+  "email": "aa",
+  "username": "aaa",
+  "password": "$2b$10$gca2t2sPVoJ3VyrgXw.bBucnBoV6aGKqRurleE2Uo1lOjzCgdnqA6",
+  "bio": "",
+  "avatar": "vrz8v5xx7s.jpg",
+  "cover": "nkym6m0pcv.jpg",
+  "website": ""
+}]

@@ -1,0 +1,115 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(234,234,234,0.4);
+  transition: opacity 1000ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index:9;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  margin-top:12%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 20px;
+  width: 30%;
+  position: relative;
+  font-family:'Open Sans';
+  color:#afafaf;
+  font-size:12px;
+  line-height:15px;
+  transition: all 5s ease-in-out;
+  overflow:hidden;
+}
+
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 0.2s ease-in-out;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #EAEAEA;
+}
+.popup .close:hover {
+  color: #008AD4;
+}
+
+#signup{
+	width:90%;
+	height:auto;
+	margin:0;
+	padding:20px;
+	background:transparent;
+	-webkit-animation: slide-left 1s;
+	animation: slide-left 1s;
+}
+#login{
+	width:90%;
+	height:auto;
+	margin:0;
+	padding:20px;
+	background:transparent;
+	display:none;
+	-webkit-animation: slide-left 1s;
+	animation: slide-left 1s;
+}
+
+.headercont{
+	width:100%;
+	display:flex;
+	justify-content: space-evenly;
+	border-bottom:1px solid #eaeaea;
+}
+
+.popuphead{
+	font-family:'Open Sans';
+	font-size:15px;
+	letter-spacing: 1px;
+	line-height:17px;
+	width:auto;
+	height:auto;
+	padding:10px;
+	text-transform: uppercase;
+}
+
+.popuphead:hover{
+	color:#454545;
+}
+
+input{
+	width:100%;
+	height:20px;
+	padding:10px;
+	font-family:'Montserrat';
+	font-size:14px;
+	color: #7c7c7c;
+	border-radius:20px;
+	border: 1px solid #eaeaea;
+}
+
+input[type=submit]{
+	width:100%;
+	height:40px;
+	padding:10px;
+	margin-left:10px;
+	background-color: #008AD4;
+	font-family:'Montserrat';
+	font-family:16px;
+	line-height:20px;
+	text-transform:uppercase;
+	color:#fff;
+	border:0px;
+	border-radius:0px;
+
+}

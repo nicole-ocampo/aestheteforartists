@@ -1,0 +1,175 @@
+<!DOCTYPE html>	
+<html> 
+<head>
+	<title> aesthete | your new artist portfolio </title>
+	<!--FONTS -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rock+Salt">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+	<link rel="stylesheet" type="text/css" href="css/mainindex.css">
+	<link rel="stylesheet" href="css/circles.css"> 
+	<link rel="stylesheet" href="css/cubes.css">
+	<link rel="stylesheet" href="css/diagonals.css">
+	<link rel="stylesheet" href="css/animations.css">
+	<link rel="stylesheet" href="css/popup.css">
+	
+</head>
+<body onload="javascript: checkstat({{status}})">
+	<div id="navigation">
+		<a href="#wrap1" ><div class="navicon" id="wrap1nav"></div></a>
+		<a href="#wrap2" ><div class="navicon" id="wrap2nav"></div></a>
+		<a href="#wrap3" ><div class="navicon" id="wrap3nav"></div></a>
+		<a href="#wrap4" ><div class="navicon" id="wrap4nav"></div></a>
+	</div>
+	<div id="wrap1">
+		<div class="bg"></div>
+		<div class="bg bg2"></div>
+		<div class="bg bg3"></div>
+
+		<div id="wrap1content">
+			<div class="header"> Aesthete </div>
+			<div class="subtext">
+				Welcome to your new artist portfolio. Make art, view art, and search for art. Find new artists, socialize with other artists, and support other artists. As long as you love art, you can find your community here - no matter what your interest is.
+			<center>
+				<br>
+				<a href="#popup1">
+				<div class="calltoaction"> Get Started </div>
+				</a>
+			</center>
+			</div>
+		</div>
+	</div>
+
+	<div id="wrap2">
+		<div id="wrap2content">
+
+			<div id="squarewrap">
+			<div id="square1"></div>
+			<div id="square2"></div>
+			</div>
+			<div class="header2"> Your future awaits! </div>
+			<div class="subtext2">
+				Looking for new ideas? Wanting to jumpstart your art portfolio? Searching for your new muse? With the amount of freedom for artists in Aesthete, you can be sure to start your new project with your best foot forward. Post, share, and tag your artworks here and watch your audience grow. 
+			</div>
+		</div>
+		<div class="area" >
+		     <ul class="circles">
+		        <li></li>
+		        <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+		      </ul>
+		 </div>
+
+		 
+	</div>
+
+	<div id="wrap3">
+
+		<div id="wrap3content">
+		<div id="gallery">
+			<div class="postg" id="post1">
+			<img src="works/1.jpg" width="200">	
+			</div>
+			<div class="postg" id="post2">
+			<img src="works/2.jpg" width="200">	
+			</div>
+			<div class="postg" id="post3">
+			<img src="works/3.jpg" width="190">	
+			</div>
+			<div class="postg" id="post4">
+			<img src="works/4.jpg" width="200">	
+			</div>
+		</div>
+		<div class="header3"> The future of artist portfolios</div>
+			<div class="subtext3">
+				You can upload any illustration that you want. Tag your posts so that you can boose its engagement. Introduce yourself to other artists in the hopes of future collaborations. The sky is the limit here. Whether you are a beginner that has only started creating art a few days ago or have been doing it for years, your artworks will always have a place here. As a site made by artists for artists, every piece is considered important.
+			</div>
+		</div>
+
+		<div class="container-fluid">
+		<!-- Background animtion-->
+		    <div class="background">
+		       <div class="cube"></div>
+		       <div class="cube"></div>
+		       <div class="cube"></div>
+		       <div class="cube"></div>
+		      <div class="cube"></div>
+		    </div>
+		</div>
+	</div>
+
+	<div id="wrap4">
+	<div id="wrap4content">
+	<div class="header4"> Start a new chapter today.</div>
+			<div class="subtext4">
+				The best thing to do is try. 
+				<br>
+				Upload your first post.
+				<br> 
+				Watch your journey as an artist develop more than ever before. <br><br>
+				<center>
+				<a href="#popup1">
+				<div class="calltoaction"> Get Started </div>
+				</a>
+			</center>
+			</div>
+		</div>
+	</div>
+
+
+	<!--POP UP -->
+	<div id="popup1" class="overlay">
+		<div class="popup">
+			<a class="close" href="#">&times;</a>
+			
+			<div class="headercont">
+			<div class="popuphead" id="signupnav">Sign up</div>
+			<div class="popuphead"id="loginnav"> Log in </div>
+			</div>
+
+			<div id="signup">
+
+				<form method="post" action="/register">
+					<label for="name">Name:</label><br>
+					<input type="text" id="name" name="name"><br><br>
+					<label for="contmail">Email:</label><br>
+					<input type="text" id="contmail" name="contmail"><br><br>
+					<label for="uname">Username:</label><br>
+					<input type="text" id="uname" name="uname"><br><br>
+					<label for="pw">Password:</label><br>
+					<input type="password" id="pw" name="pw"><br><br>
+
+					<center>
+					<input type="submit" id="regsubmit" value="Sign Up">
+					</center>
+				</form><br>
+
+			</div>
+			<div id="login"> 
+
+				<form method="post" action="/login">
+					<label for="uname2">Username:</label><br>
+					<input type="text" id="uname2" name="uname2"><br><br>
+					<label for="pw2">Password:</label><br>
+					<input type="password" id="pw2" name="pw2"><br><br>
+
+					<center>
+					<input type="submit" id ="logsubmit" value="Log in">
+					</center>
+				</form><br>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+	<script src="js/mainindex.js"></script>	
+</html>

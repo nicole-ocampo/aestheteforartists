@@ -1,0 +1,140 @@
+html, body{
+	height:100%;
+	width:100%;
+	margin:0;
+}
+
+
+body{
+	background-color: #D9EFFC;
+	background-size: 400% 400%;
+}
+
+
+#wrapcontent{
+	margin-top:12%;
+	margin-left:23%;
+	border-radius:20px;
+	background-color: #fff;
+	padding:20px;
+	float:left;
+	position: relative;
+	width:50%;
+	height:auto;
+	z-index:7;
+	box-shadow:2px 2px #eaeaea;
+	-webkit-animation: fade-in 3s ; 
+    animation: fade-in 3s ;
+}
+
+.calltoaction{
+	width:200px;
+	height:auto;
+	padding:20px;
+	border:1px solid transparent;
+	border-radius:20px;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-family:'Open Sans';
+	font-size:12px;
+	color:#afafaf;
+}
+
+.calltoaction:hover{
+	color:#71CAFF;
+}
+
+#accs{
+	border:1px solid #a0a0a0;
+}
+
+#actionwrap{
+	float:left;
+	width:auto;
+	height:100%;
+	border-right:1px solid #a0a0a0;
+	padding:20px;
+}
+
+#formwrap{
+	float:right;
+	margin-right:50px;
+	width:50%;
+	height:100%;
+	padding:20px;
+	font-family:'Open Sans';
+	font-size:12px;
+	line-height:15px;
+	color:#a0a0a0;
+	text-transform: uppercase;
+	-webkit-animation: slide-left 0.5s;
+	animation: slide-left 0.5s;
+}
+
+#formwrap2{
+	float:right;
+	margin-right:52px;
+	width:50%;
+	height:100%;
+	padding:20px;
+	font-family:'Open Sans';
+	font-size:12px;
+	line-height:15px;
+	color:#a0a0a0;
+	text-transform: uppercase;
+	display:none;
+	-webkit-animation: slide-left 0.5s;
+	animation: slide-left 0.5s;
+}
+
+a{
+	text-decoration: none;
+}
+
+textarea{
+	border:0px;
+	height:150px;
+	width:95%;
+	padding:10px;
+	font-family:'Open Sans';
+	font-size:12px;
+	color: #7c7c7c;
+	border-radius:20px;
+	border: 1px solid #eaeaea;
+}
+
+input[type=file]{
+	border:0px;
+}
+
+#save, #save2{
+	border: 1px solid transparent;
+}
+
+#save1:hover, #save2:hover{
+	background-color: #ffa7a6;
+	color:#fff;
+	transition: all 0.1s ease-in-out;
+}
+
+#deletebutton{
+	width:100%;
+	height:auto;
+	padding:10px;
+	text-align:center;
+	background:#a0a0a0;
+	border:1px solid transparent;
+	color:#fff;
+	transition: all 0.3s ease-in-out;
+}
+
+#deletebutton:hover{
+	width:100%;
+	height:auto;
+	padding:10px;
+	text-align:center;
+	background:#fff;
+	color:#a0a0a0;
+	border: 1px solid #a0a0a0;
+	transition: all 0.3s ease-in-out;
+}

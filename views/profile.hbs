@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> aesthete | your new artist portfolio </title>
+	<link rel="stylesheet" type="text/css" href="/css/profile.css">
+	<link rel="stylesheet" type="text/css" href="/css/menubar.css">
+	<link rel="stylesheet" type="text/css" href="/css/animations.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rock+Salt">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+</head>
+<body>
+	<div id="profilepage">
+		<div id="menubar">
+			<div id="logowrap"> aesthete </div>
+			<div id="controlwrap">
+
+			
+			<form method="post" action="/search">
+			<input type="text" name="query" placeholder="Search">
+			<button type="submit"><img src="/icons/magnifier.png" width="10"></button></form>
+			
+
+			<a href="/feed">
+		    <div class="menubutton" id="homenav"> home </div> </a>
+
+		    <a href="/profile">
+		    <div class="menubutton"> profile </div> </a>
+
+		    <a href="/logout">
+		    <div class="menubutton"> logout </div> </a>
+			</div>
+	  	</div>
+
+		<div id="headercont"> 
+			<div id="coverphoto"><img src="/cover/{{cover}}"></div>
+			<div id="profdetails">
+				<div id="profdetailscont">
+					<div id="usericonbox">
+					<div id="usericon"> <img src="/avatar/{{avatar}}" id="iconimg"></div>
+					</div>
+					<div id="detailwrapper">
+					
+					<div id="pdtop">
+						<div id="name"> {{name}} </div>
+						{{#if author}}
+						<a href="/editprofile">
+						<div id="fbutton"> edit profile</div>
+						</a>
+						{{/if}}
+					</div>
+					<br>
+					<div id="bio"> {{bio}}
+					</div> 
+
+					<div id="pdbottom">
+						<a href="http://{{website}}">
+						<div id="followers"> {{website}}</div>
+						</a>
+					</div>
+					<br><br>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+
+		<!-- POST START -->
+		<div class="ppfeed">
+			<div class="ppfeedcont" id="row1">
+				{{#if author}}
+				<a title="Create a post" href="#addpostsc">
+				<div id ="addpostbutton">+</div>
+				</a>
+				{{/if}}
+
+				<div class="thumbsview" id="addpostsc">
+					<div class="tbcontent" id="add1">
+						<a class="close2" href="#">&times;</a> <br>
+						<div id="formwrap">
+							<form method="post" enctype="multipart/form-data" action="uploadpost">
+							<label for="cpimg">Upload Post:</label>
+		  					<input type="file" id="cpimg" name="cpimg" accept="image/*"><br><br>
+							<label for="cpcap">Caption:</label><br>
+							<input type="text" id="cpcap" name="cpcap"><br><br>
+							<label for="cptag">Tag/s:</label><br>
+							<input type="text" id="cptag" name="cptag"><br><br>
+							
+							<center>
+							<input value="Create post" id="createpost" type="submit">
+							</center>
+
+							</form><br>
+
+						</div>
+					</div>
+
+				</div>
+
+
+				<!-- POSTS -->
+			
+			{{#each posts}}
+
+				<a href="/post/{{_id}}">
+				<div class="feedthumbs">
+					<img src="/posts/{{image}}" width="100%" height="100%">
+				</div>
+				</a>
+				
+				
+			{{/each}}
+
+		</div>
+	
+	
+</body>
+</html>

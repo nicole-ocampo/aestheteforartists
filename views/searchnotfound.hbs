@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+	<head>
+		<title>aesthete | your new artist portfolio</title>
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rock+Salt">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+		<link rel="stylesheet" href="css/animations.css">
+		<link rel="stylesheet" href="css/menubar.css">
+		<link rel="stylesheet" href="css/searchnotfound.css">
+
+	</head>
+	<body>
+		<div id="menubar">
+			<div id="logowrap"> aesthete </div>
+			<div id="controlwrap">
+
+
+			<form method="post" action="search">
+			<input type="text" name="query" placeholder="Search">
+			<button type="submit"><img src="/icons/magnifier.png" width="10"></button></form>
+
+			<a href="/feed">
+		    <div class="menubutton" id="homenav"> home </div> </a>
+
+		    <a href="/profile">
+		    <div class="menubutton"> profile </div> </a>
+
+		    <a href="/logout">
+		    <div class="menubutton"> logout </div> </a>
+			</div>
+	  	</div>
+
+	  	<div id="wrapcontent">
+			<div class="header"> Sorry, we can't find what you're looking for</div>
+			<div class="subtext">
+				Our minions have searched high and low for your query, but unfortunately they have not succeeded. Maybe you could try a different keyword. Or go back to your feed -- whichever works best! <br><br>
+
+				<a href="/feed">
+				<div class="calltoaction"> Go back to feed </div> </a>
+			</div>
+
+			
+		</div>
+		</div>
+
+	</body>
+</html>

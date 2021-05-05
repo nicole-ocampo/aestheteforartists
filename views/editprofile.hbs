@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+	<head>
+		<title>aesthete | your new artist portfolio</title>
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rock+Salt">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+		<link rel="stylesheet" href="css/animations.css">
+		<link rel="stylesheet" href="css/menubar.css">
+		<link rel="stylesheet" href="css/editprofile.css">
+		
+	</head>
+	<body onload="javascript: checkstat({{status}})">
+		<div id="menubar">
+			<div id="logowrap"> aesthete </div>
+			<div id="controlwrap">
+			
+			<form method="post" action="search">
+			<input type="text" name="query" placeholder="Search">
+			<button type="submit"><img src="icons/magnifier.png" width="10"></button></form>
+
+			<a href="/feed">
+		    <div class="menubutton" id="homenav"> home </div> </a>
+
+		    <a href="/profile">
+		    <div class="menubutton"> profile </div> </a>
+
+		    <a href="/logout">
+		    <div class="menubutton"> logout </div> </a>
+			</div>
+	  	</div>
+
+	  	<div id="wrapcontent">
+			<div id ="actionwrap">
+			<div class="calltoaction" id="accs"> Account Settings </div> <br>
+			<div class="calltoaction" id="profs"> Profile Settings </div>
+			</div>
+
+			<div id="formwrap">
+				<form method="post" enctype="multipart/form-data" action="editaccount">
+					<label for="pimg">Cover Photo:</label>
+  					<input type="file" id="cimg" name="cimg" accept="image/*"><br><br>
+					<label for="uname">Username:</label><br>
+					<input type="text" id="uname" name="uname"><br><br>
+					<label for="contmail">Email:</label><br>
+					<input type="text" id="contmail" name="contmail"><br><br>
+					<label for="pw">Password:</label><br>
+					<input type="password" id="pw" name="pw"><br>
+
+					<center>
+					<input type="submit" value="save">
+					</center>
+				</form><br>
+
+				<a href="/deleteprofile">
+				<div id="deletebutton">delete account</div> </a>
+			</div> 
+
+
+			<div id="formwrap2">
+				<form method="post" enctype="multipart/form-data" action="editprofileset">
+					<label for="pimg">Profile Photo:</label>
+  					<input type="file" id="pimg" name="pimg" accept="image/*"><br><br>
+					<label for="dname">Display Name:</label><br>
+					<input type="text" id="dname" name="dname"><br><br>
+					<label for="website">Website:</label><br>
+					<input type="text" id="website" name="website"><br><br>
+					<label for="bio">Bio:</label><br>
+					<textarea rows="10" cols="25" id="bio" name="bio"></textarea><br>
+
+					<center>
+					<input type="submit" value="save">
+					</center>
+				</form><br>
+			</div> 
+		</div>
+		</div>
+
+	</body>
+	<script src="js/editprofile.js"></script>	
+</html>
