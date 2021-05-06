@@ -81,7 +81,7 @@ const helper = {
             res.redirect(`/searchnotfound`);
         }
     },
-
+ 
     searchNotFound: function (req, res) {
         res.render("searchnotfound");   
     },
@@ -90,25 +90,29 @@ const helper = {
         var query = req.params.id;
         db.findOne(`users`, {"username": query}, function(res2){
             
-            db.findMany(`posts`, {"user": query}, function(res3){
-                var sessionuser = req.session.username;
-                var val;
-                if (query != sessionuser)
-                    val = false;
-                else
-                    val = true;
+            if (res2){
+                db.findMany(`posts`, {"user": query}, function(res3){
+                    var sessionuser = req.session.username;
+                    var val;
+                    if (query != sessionuser)
+                        val = false;
+                    else
+                        val = true;
 
-                    res.render("profile", 
-                    {
-                        author: val,
-                        name: res2.name,
-                        bio: res2.bio,
-                        avatar: res2.avatar,
-                        cover: res2.cover,
-                        website: res2.website,
-                        posts: res3
-                    });
-            });
+                        res.render("profile", 
+                        {
+                            author: val,
+                            name: res2.name,
+                            bio: res2.bio,
+                            avatar: res2.avatar,
+                            cover: res2.cover,
+                            website: res2.website,
+                            posts: res3
+                        });
+                });
+            } else if (!res2){
+                res.redirect(`/searchnotfound`);
+            }
 
 
             
