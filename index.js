@@ -10,8 +10,8 @@ const alert = require(`alert`);
 const app = express();
 
 dotenv.config();
-port = process.env.PORT || process.env.YOUR_PORT;
-hostname = process.env.YOUR_HOSTNAME || process.env.HOSTNAME || "0.0.0.0";
+port = process.env.PORT || 3000;
+hostname = process.env.HOSTNAME || '0.0.0.0'|| process.env.YOUR_HOSTNAME;
 app.set(`view engine`, `hbs`);
 
 
@@ -31,7 +31,7 @@ app.use(function(req, res) {
 
 
 // db.connect();
-app.listen(port, hostname, function(){
+app.listen(port, function(){
 	console.log(`Server running at: `);
 	console.log(`http://` + hostname + `:` + port);
 });
