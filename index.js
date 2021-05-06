@@ -10,7 +10,7 @@ const alert = require(`alert`);
 const app = express();
 
 dotenv.config();
-port = process.env.PORT;
+port = process.env.PORT || process.env.YOUR_PORT;
 hostname = process.env.HOSTNAME;
 app.set(`view engine`, `hbs`);
 
