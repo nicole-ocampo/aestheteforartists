@@ -36,10 +36,15 @@ const logInController = {
 			console.log(`User Found`);
 
 			bcrypt.compare(plog, res2.password, function(err, equal){
-				req.session.loggedIn = true;
-				req.session.username = ulog;
-				console.log(req.session);
-				res.redirect(`/editprofile`);
+				if (equal){
+					req.session.loggedIn = true;
+					req.session.username = ulog;
+					console.log(req.session);
+					res.redirect(`/editprofile`);
+				} else{
+					res.redirect(`/loginerror`);
+				}
+				
 			});
 
 			
