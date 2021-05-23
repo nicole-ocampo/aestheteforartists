@@ -13,9 +13,10 @@
 	<link rel="stylesheet" href="css/diagonals.css">
 	<link rel="stylesheet" href="css/animations.css">
 	<link rel="stylesheet" href="css/popup.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
 	
 </head>
-<body onload="javascript: checkstat({{status}})">
+<body > <!-- onload="javascript: checkstat({{status}})" -->
 	<div id="navigation">
 		<a href="#wrap1" ><div class="navicon" id="wrap1nav"></div></a>
 		<a href="#wrap2" ><div class="navicon" id="wrap2nav"></div></a>
@@ -137,34 +138,38 @@
 
 			<div id="signup">
 
-				<form method="post" action="/register">
+				<form id="signupForm" method="post" name="signupFormplace"> <!-- action="/register" method="post" -->
 					<label for="name">Name:</label><br>
-					<input type="text" id="name" name="name"><br><br>
+					<input type="text" id="name" class="field" name="name"><br><br>
 					<label for="contmail">Email:</label><br>
-					<input type="text" id="contmail" name="contmail"><br><br>
+					<input type="text" id="contmail" class="field" name="contmail"><br><br>
 					<label for="uname">Username:</label><br>
-					<input type="text" id="uname" name="uname"><br><br>
+					<input type="text" id="uname"  class="field" name="uname"><br><br>
 					<label for="pw">Password:</label><br>
-					<input type="password" id="pw" name="pw"><br><br>
+					<input type="password" id="pw" class="field" name="pw"><br><br>
 
 					<center>
-					<input type="submit" id="regsubmit" value="Sign Up">
+					<input type="button" id="regsubmit" value="Sign Up">
 					</center>
 				</form><br>
+
+				<p id="errorMessage"></p>
 
 			</div>
 			<div id="login"> 
 
-				<form method="post" action="/login">
+				<form method="post" id="loginForm">
 					<label for="uname2">Username:</label><br>
 					<input type="text" id="uname2" name="uname2"><br><br>
 					<label for="pw2">Password:</label><br>
 					<input type="password" id="pw2" name="pw2"><br><br>
 
 					<center>
-					<input type="submit" id ="logsubmit" value="Log in">
+					<input type="button" id ="logsubmit" value="Log in">
 					</center>
 				</form><br>
+
+				<p id="errorMessage2"></p>
 
 			</div>
 		</div>

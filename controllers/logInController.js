@@ -30,6 +30,9 @@ const logInController = {
 	logIn: function(req,res){
 		var ulog = req.body.uname2;
 		var plog = req.body.pw2;
+		var answer = 0;
+		console.log(plog);
+
 
 		const doc = db.findOne(`users`,{"username": ulog}, function(res2){
 		if(res2){ //render profile
@@ -40,9 +43,9 @@ const logInController = {
 					req.session.loggedIn = true;
 					req.session.username = ulog;
 					console.log(req.session);
-					res.redirect(`/editprofile`);
-				} else{
-					res.redirect(`/loginerror`);
+					res.send({answer: 1});
+				} else{ 
+					res.send({answer: 2});
 				}
 				
 			});
@@ -51,7 +54,7 @@ const logInController = {
 		}
 		else{ //render index + alert msg
 			console.log(`User Not Found`);
-			res.redirect(`/loginerror`);
+			res.send({answer: 2});
 		}
 	});
 	},
@@ -61,9 +64,20 @@ const logInController = {
 		var email = req.body.contmail;
 		var username = req.body.uname;
 		var password = req.body.pw;
+		var answer = 0;
 
-		if (name.length == 0 || email.length == 0 || username.length == 0 || password.length == 0)
-			res.redirect(`/registererror2`);
+		console.log(name);
+		console.log(email);
+		console.log(username);
+		console.log(password);
+		console.log('went to register');
+
+		if (name.length == 0 || email.length == 0 || username.length == 0 || password.length == 0){
+			// res.redirect(`/registererror2`);
+			console.log('error 1');
+			answer = 1;
+			res.send({answer: 1});
+		}
 		else{
 
 			var test=  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/;
@@ -84,7 +98,10 @@ const logInController = {
 					db.findOne(`users`, {"username": username}, function(res2){
 						if(res2){
 							console.log(`User Exists`);
-							res.redirect(`/registererror`);
+							// res.redirect(`/registererror`);
+							console.log('error 2');
+							answer =  2;
+							res.send({answer: 2});
 
 						} else{
 							console.log(`Register success!`);
@@ -93,7 +110,9 @@ const logInController = {
 							req.session.loggedIn = true;
 							req.session.username = username;
 							console.log(req.session);
-							res.redirect(`/editprofile`);
+							// res.redirect(`/editprofile`);
+							answer =  4;
+							res.send({answer: 4});
 						}
 					});
 
@@ -103,14 +122,13 @@ const logInController = {
 				
 			}
 			else{ 
-				res.redirect(`/registererror3`);
+				// res.redirect(`/registererror3`);
+				console.log('error 3');
+				answer =  3;
+				res.send({answer: 3});
 			}
 			
 		}		
-
-
-
-		
 
 	}
 }
